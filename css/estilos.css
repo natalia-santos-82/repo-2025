@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
+  
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -22,6 +23,7 @@
     top: 0;
     z-index: 1000;
   }
+  
   .navbar a {
     color: #ffffff;
     text-decoration: none;
@@ -31,16 +33,18 @@
     gap: 0.5rem;
     transition: all 0.3s ease;
   }
+  
   .navbar a:hover {
     color: #61dafb;
     transform: scale(1.05);
   }
+  
   .navbar i {
     font-size: 1.2rem;
   }
- 
- /* Contenido principal */
-.inicio {
+  
+  /* Contenido principal: Inicio */
+  .inicio {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,13 +86,81 @@
     font-size: 1.1rem;
   }
   
-  /* Responsive: apila la imagen arriba del texto */
-  @media (max-width: 600px) {
-    .contenedor-inicio {
-      flex-direction: column;
-    }
+  /* Contenido principal: Experiencia */
+ /* Contenido principal: Experiencia */
+.experiencia {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #ffffff;
   }
   
+  .experiencia h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #20232a;
+  }
+  
+  .tarjetas-experiencia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .tarjeta {
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Alternancia de colores */
+  .tarjeta:nth-child(even) {
+    background-color: #e0f7fa;
+  }
+  .tarjeta:nth-child(odd) {
+    background-color: #fffde7;
+  }
+  
+  /* Efecto hover */
+  .tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  .tarjeta:hover i {
+    transform: rotate(10deg);
+  }
+  
+  /* Icono */
+  .tarjeta i {
+    font-size: 2rem;
+    color: #fff;
+    background-color: #61dafb;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Título y texto */
+  .tarjeta h2 {
+    font-size: 1.3rem;
+    color: #20232a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tarjeta p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Extra (si usás un botón dentro de la tarjeta) */
+  .boton-vermas:hover {
+    background-color: #21a1f1;
+  }
   
   /* Footer */
   footer {
@@ -98,21 +170,25 @@
     text-align: center;
     margin-top: 2rem;
   }
+  
   footer .redes {
     margin-top: 0.5rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
   }
+  
   footer .redes a {
     color: #ffffff;
     font-size: 1.5rem;
     transition: transform 0.3s ease;
   }
+  
   footer .redes a:hover {
     color: #61dafb;
     transform: scale(1.2);
   }
+
   
   /* Responsive design */
   @media (max-width: 600px) {
@@ -121,8 +197,8 @@
       gap: 1rem;
     }
   
-    main {
-      padding: 1rem;
+    .contenedor-inicio {
+      flex-direction: column;
     }
   }
   
