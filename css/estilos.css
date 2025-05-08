@@ -189,6 +189,24 @@
     transform: scale(1.2);
   }
 
+  .tarjeta i:hover {
+    animation: saltarRotar 0.6s ease-in-out;
+    background-color: #21a1f1; /* cambia de color al pasar el mouse */
+    color: #fff; /* ícono blanco sobre fondo celeste */
+  }
+  
+  @keyframes saltarRotar {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(15deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
   
   /* Responsive design */
   @media (max-width: 600px) {
