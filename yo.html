@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Animado</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1537498425277-c283d32ef9db') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .container {
+      overflow: hidden;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+    section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 5rem 2rem 2rem 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.5rem;
+      max-width: 700px;
+    }
+    .titulo-loco {
+      font-size: 6rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      white-space: nowrap;
+      will-change: transform;
+    }
+    .titulo-loco-container {
+      overflow: hidden;
+      width: 100%;
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 2rem;
+    }
+    .redes a {
+      color: white;
+      font-size: 2rem;
+      margin: 0 1rem;
+      transition: color 0.3s;
+    }
+    .redes a:hover {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+      <a href="experiencia.html"><i class="fas fa-briefcase"></i> Experiencia</a>
+      <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+    </nav>
+  </header>
+
+  <div data-scroll-container class="container">
+    <section data-scroll-section>
+      <div class="titulo-loco-container">
+        <h2 class="titulo-loco" data-scroll data-scroll-speed="6">Tecnologías que manejo</h2>
+      </div>
+      <p data-scroll data-scroll-speed="2">
+        Esta es una sección de ejemplo con animaciones suaves gracias a Locomotive Scroll. Podés destacar tu experiencia con HTML, CSS, Python, diseño 3D y más.
+      </p>
+    </section>
+
+    <section data-scroll-section>
+      <div class="titulo-loco-container">
+        <h2 class="titulo-loco" data-scroll data-scroll-direction="horizontal" data-scroll-speed="5">Diseño web moderno</h2>
+      </div>
+      <p data-scroll data-scroll-speed="2">
+        Agrega secciones animadas, tipografía llamativa y efectos que sorprendan. Esta estructura es totalmente personalizable.
+      </p>
+    </section>
+
+    <section data-scroll-section>
+      <div class="titulo-loco-container">
+        <h2 class="titulo-loco" data-scroll data-scroll-speed="8">¡Animate a más!</h2>
+      </div>
+      <p data-scroll data-scroll-speed="3">
+        Puedo ayudarte a integrar scrolls, efectos 3D, sonido, y más recursos para una experiencia verdaderamente inolvidable.
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>Mis redes:</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/nati.santos.7" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/nar_anjalima/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script>
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+      lerp: 0.07,
+    });
+  </script>
+</body>
+</html>
