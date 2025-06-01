@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title id="titulo-pagina">Contacto - Mi Currículum</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-izquierda">
+        <a href="index.html"><i class="fas fa-home"></i> <span id="nav-inicio">Inicio</span></a>
+        <a href="habilidades.html"><i class="fas fa-tools"></i> <span id="nav-habilidades">Habilidades</span></a>
+        <a href="experiencia.html"><i class="fas fa-briefcase"></i> <span id="nav-experiencia">Experiencia</span></a>
+        <a href="formacion.html"><i class="fas fa-graduation-cap"></i> <span id="nav-formacion">Formación</span></a>
+        <a href="contacto.html"><i class="fas fa-envelope"></i> <span id="nav-contacto">Contacto</span></a>
+      </div>
+      <div class="nav-derecha">
+        <button onclick="cambiarIdioma('es')">ESPAÑOL</button>
+        <button onclick="cambiarIdioma('en')">ENGLISH</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="contacto">
+      <i class="fas fa-paper-plane mensaje-icono"></i>
+      <h1 id="contacto-titulo">¿Hablamos?</h1>
+      <p id="contacto-texto">Si querés contactarme por una oportunidad, una colaboración o simplemente para saludar, ¡completá este formulario!</p>
+
+      <form action="https://formspree.io/f/xanoqyro" method="POST">
+  <input id="input-nombre" type="text" name="nombre" placeholder="Tu nombre" required />
+  <input id="input-email" type="email" name="email" placeholder="Tu email" required />
+  <textarea id="input-mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+  <button type="submit"><i class="fas fa-paper-plane"></i> <span id="contacto-enviar">Enviar</span></button>
+</form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p id="pie-redes">Mis redes:</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/nati.santos.7" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/nar_anjalima/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://linkedin.com/in/natalia-santos-chacabuco" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <!-- Script de traducción -->
+  <script>
+    const traducciones = {
+      es: {
+        "titulo-pagina": "Contacto - Mi Currículum",
+        "nav-inicio": "Inicio",
+        "nav-habilidades": "Habilidades",
+        "nav-experiencia": "Experiencia",
+        "nav-formacion": "Formación",
+        "nav-contacto": "Contacto",
+        "contacto-titulo": "¿Hablamos?",
+        "contacto-texto": "Si querés contactarme por una oportunidad, una colaboración o simplemente para saludar, ¡completá este formulario!",
+        "contacto-enviar": "Enviar",
+        "pie-redes": "Mis redes:",
+        "placeholder-nombre": "Tu nombre",
+        "placeholder-email": "Tu email",
+        "placeholder-mensaje": "Escribí tu mensaje..."
+      },
+      en: {
+        "titulo-pagina": "Contact - My Resume",
+        "nav-inicio": "Home",
+        "nav-habilidades": "Skills",
+        "nav-experiencia": "Experience",
+        "nav-formacion": "Education",
+        "nav-contacto": "Contact",
+        "contacto-titulo": "Let's Talk!",
+        "contacto-texto": "If you'd like to contact me for an opportunity, a collaboration or just to say hi, fill out this form!",
+        "contacto-enviar": "Send",
+        "pie-redes": "My social media:",
+        "placeholder-nombre": "Your name",
+       "placeholder-email": "Your email",
+       "placeholder-mensaje": "Write your message..."
+      }
+    };
+
+   function cambiarIdioma(idioma) {
+  const textos = traducciones[idioma];
+  for (let id in textos) {
+    if (id.startsWith("placeholder-")) {
+      const campo = id.replace("placeholder-", "input-");
+      const el = document.getElementById(campo);
+      if (el) {
+        el.setAttribute("placeholder", textos[id]);
+      }
+    } else {
+      const el = document.getElementById(id);
+      if (el) {
+        el.textContent = textos[id];
+      }
+    }
+  }
+}
+  </script>
+
+</body>
+</html>

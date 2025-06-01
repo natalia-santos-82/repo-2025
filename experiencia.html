@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Iexperiencia - Mi Currículum</title>
+  <title>Experiencia - Mi Currículum</title>
   <link rel="stylesheet" href="css/estilos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
@@ -12,69 +12,81 @@
   <!-- Barra de navegación -->
   <header>
     <nav class="navbar">
-      <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
-      <a href="habilidades.html"><i class="fas fa-tools"></i> Habilidades</a>
-      <a href="experiencia.html"><i class="fas fa-briefcase"></i> Experiencia</a>
-      <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+      <div class="nav-izquierda">
+        <a href="index.html"><i class="fas fa-home"></i> <span id="nav-inicio">Inicio</span></a>
+        <a href="habilidades.html"><i class="fas fa-tools"></i> <span id="nav-habilidades">Habilidades</span></a>
+        <a href="experiencia.html"><i class="fas fa-briefcase"></i> <span id="nav-experiencia">Experiencia</span></a>
+        <a href="formacion.html"><i class="fas fa-graduation-cap"></i> <span id="nav-formacion">Formación</span></a>
+        <a href="contacto.html"><i class="fas fa-envelope"></i> <span id="nav-contacto">Contacto</span></a>
+      </div>
+      <div class="nav-derecha">
+        <button onclick="cambiarIdioma('es')">ESPAÑOL</button>
+        <button onclick="cambiarIdioma('en')">ENGLISH</button>
+      </div>
     </nav>
   </header>
 
   <!-- Contenido principal -->
   <main>
- 
-        <section class="experiencia">
-          <h1>Mi Experiencia</h1>
-          <div class="tarjetas-experiencia">
-            <div class="tarjeta">
-              <i class="fas fa-headset"></i>
-              <h2>Atención al cliente</h2>
-              <p>Experiencia resolviendo consultas, reclamos y ofreciendo soporte personalizado.</p>
-            </div>
-            <div class="tarjeta">
-              <i class="fas fa-shopping-cart"></i>
-              <h2>Ventas y comercio</h2>
-              <p>Manejo de ventas presenciales y virtuales, seguimiento de pedidos y atención al público.</p>
-            </div>
-            <div class="tarjeta">
-              <i class="fas fa-cube"></i>
-              <h2>Diseño e impresión 3D</h2>
-              <p>Modelado de objetos personalizados y manejo de impresoras 3D.</p>
-            </div>
-            <div class="tarjeta">
-              <i class="fas fa-paint-brush"></i>
-              <h2>Decoración y pintura</h2>
-              <p>Creación de piezas decorativas con pintura acrílica y técnicas mixtas.</p>
-            </div>
-            <div class="tarjeta">
-              <i class="fas fa-box-open"></i>
-              <h2>Gestión de productos</h2>
-              <p>Organización y control de inventario en emprendimientos propios.</p>
-            </div>
-            <div class="tarjeta">
-              <i class="fas fa-camera-retro"></i>
-              <h2>Fotografía de producto</h2>
-              <p>Fotografía y edición para catálogo y redes sociales.</p>
-            </div>
-            <div class="tarjeta">
-              <i class="fas fa-laptop-code"></i>
-              <h2>Diseño web</h2>
-              <p>Desarrollo de páginas web para proyectos personales y emprendimientos.</p>
-            </div>
-            <div class="tarjeta">
-              <i class="fas fa-people-arrows"></i>
-              <h2>Trabajo en equipo</h2>
-              <p>Colaboración en proyectos con buena comunicación y resolución de conflictos.</p>
-             
-            </div>
-          </div>
-        </section>
-    
+    <section class="experiencia">
+      <h1 id="titulo-experiencia">Mi Experiencia</h1>
+      <div class="tarjetas-experiencia">
+
+        <div class="tarjeta">
+          <i class="fas fa-headset"></i>
+          <h2 id="exp1-titulo">Atención al cliente</h2>
+          <p id="exp1-desc">Experiencia resolviendo consultas, reclamos y ofreciendo soporte personalizado.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-shopping-cart"></i>
+          <h2 id="exp2-titulo">Ventas y comercio</h2>
+          <p id="exp2-desc">Manejo de ventas presenciales y virtuales, seguimiento de pedidos y atención al público.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-cube"></i>
+          <h2 id="exp3-titulo">Diseño e impresión 3D</h2>
+          <p id="exp3-desc">Modelado de objetos personalizados y manejo de impresoras 3D.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-paint-brush"></i>
+          <h2 id="exp4-titulo">Decoración y pintura</h2>
+          <p id="exp4-desc">Creación de piezas decorativas con pintura acrílica y técnicas mixtas.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-box-open"></i>
+          <h2 id="exp5-titulo">Gestión de productos</h2>
+          <p id="exp5-desc">Organización y control de inventario en emprendimientos propios.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-camera-retro"></i>
+          <h2 id="exp6-titulo">Fotografía de producto</h2>
+          <p id="exp6-desc">Fotografía y edición para catálogo y redes sociales.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-laptop-code"></i>
+          <h2 id="exp7-titulo">Diseño web</h2>
+          <p id="exp7-desc">Desarrollo de páginas web para proyectos personales y emprendimientos.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-people-arrows"></i>
+          <h2 id="exp8-titulo">Trabajo en equipo</h2>
+          <p id="exp8-desc">Colaboración en proyectos con buena comunicación y resolución de conflictos.</p>
+        </div>
+
+      </div>
+    </section>
   </main>
-  
 
   <!-- Pie de página -->
   <footer>
-    <p>Mis redes:</p>
+    <p id="pie-redes">Mis redes:</p>
     <div class="redes">
       <a href="https://www.facebook.com/nati.santos.7" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.instagram.com/nar_anjalima/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -82,14 +94,83 @@
       <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </footer>
+
+  <!-- Tilt -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-<script>
-  VanillaTilt.init(document.querySelectorAll(".tarjeta"), {
-    max: 15,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.3
-  });
-</script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".tarjeta"), {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.3
+    });
+  </script>
+
+  <!-- Script de traducción -->
+  <script>
+    const traducciones = {
+      es: {
+        "nav-inicio": "Inicio",
+        "nav-habilidades": "Habilidades",
+        "nav-experiencia": "Experiencia",
+        "nav-formacion": "Formación",
+        "nav-contacto": "Contacto",
+        "titulo-experiencia": "Mi Experiencia",
+        "exp1-titulo": "Atención al cliente",
+        "exp1-desc": "Experiencia resolviendo consultas, reclamos y ofreciendo soporte personalizado.",
+        "exp2-titulo": "Ventas y comercio",
+        "exp2-desc": "Manejo de ventas presenciales y virtuales, seguimiento de pedidos y atención al público.",
+        "exp3-titulo": "Diseño e impresión 3D",
+        "exp3-desc": "Modelado de objetos personalizados y manejo de impresoras 3D.",
+        "exp4-titulo": "Decoración y pintura",
+        "exp4-desc": "Creación de piezas decorativas con pintura acrílica y técnicas mixtas.",
+        "exp5-titulo": "Gestión de productos",
+        "exp5-desc": "Organización y control de inventario en emprendimientos propios.",
+        "exp6-titulo": "Fotografía de producto",
+        "exp6-desc": "Fotografía y edición para catálogo y redes sociales.",
+        "exp7-titulo": "Diseño web",
+        "exp7-desc": "Desarrollo de páginas web para proyectos personales y emprendimientos.",
+        "exp8-titulo": "Trabajo en equipo",
+        "exp8-desc": "Colaboración en proyectos con buena comunicación y resolución de conflictos.",
+        "pie-redes": "Mis redes:"
+      },
+      en: {
+        "nav-inicio": "Home",
+        "nav-habilidades": "Skills",
+        "nav-experiencia": "Experience",
+        "nav-formacion": "Education",
+        "nav-contacto": "Contact",
+        "titulo-experiencia": "My Experience",
+        "exp1-titulo": "Customer Service",
+        "exp1-desc": "Experience resolving queries, complaints, and offering personalized support.",
+        "exp2-titulo": "Sales and Commerce",
+        "exp2-desc": "In-person and online sales, order tracking, and customer service.",
+        "exp3-titulo": "3D Design and Printing",
+        "exp3-desc": "Modeling custom objects and operating 3D printers.",
+        "exp4-titulo": "Decoration and Painting",
+        "exp4-desc": "Creating decorative pieces with acrylic paint and mixed techniques.",
+        "exp5-titulo": "Product Management",
+        "exp5-desc": "Organization and inventory control in own ventures.",
+        "exp6-titulo": "Product Photography",
+        "exp6-desc": "Photography and editing for catalogs and social media.",
+        "exp7-titulo": "Web Design",
+        "exp7-desc": "Developing websites for personal projects and businesses.",
+        "exp8-titulo": "Teamwork",
+        "exp8-desc": "Project collaboration with good communication and conflict resolution.",
+        "pie-redes": "My social media:"
+      }
+    };
+
+    function cambiarIdioma(idioma) {
+      const textos = traducciones[idioma];
+      for (let id in textos) {
+        const el = document.getElementById(id);
+        if (el) {
+          el.textContent = textos[id];
+        }
+      }
+    }
+  </script>
+
 </body>
 </html>

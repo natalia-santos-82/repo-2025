@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habilidades - Mi Currículum</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-izquierda">
+        <a href="index.html"><i class="fas fa-home"></i> <span id="nav-inicio">Inicio</span></a>
+        <a href="habilidades.html"><i class="fas fa-tools"></i> <span id="nav-habilidades">Habilidades</span></a>
+        <a href="experiencia.html"><i class="fas fa-briefcase"></i> <span id="nav-experiencia">Experiencia</span></a>
+        <a href="formacion.html"><i class="fas fa-graduation-cap"></i> <span id="nav-formacion">Formación</span></a>
+        <a href="contacto.html"><i class="fas fa-envelope"></i> <span id="nav-contacto">Contacto</span></a>
+      </div>
+      <div class="nav-derecha">
+        <button onclick="cambiarIdioma('es')">ESPAÑOL</button>
+        <button onclick="cambiarIdioma('en')">ENGLISH</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="experiencia">
+      <h1 id="titulo-habilidades">Herramientas y Tecnologías</h1>
+
+      <div class="tarjetas-experiencia">
+
+        <!-- Paquete Office -->
+        <div class="tarjeta">
+          <i class="fas fa-file-word"></i>
+          <h2>Microsoft Word</h2>
+          <p id="word-desc">Procesamiento de textos, plantillas, índices automáticos, tablas.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-file-excel"></i>
+          <h2>Microsoft Excel</h2>
+          <p id="excel-desc">Fórmulas, funciones, tablas dinámicas, gráficos.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-file-powerpoint"></i>
+          <h2>PowerPoint</h2>
+          <p id="ppt-desc">Presentaciones profesionales, animaciones, plantillas.</p>
+        </div>
+
+        <!-- Desarrollo y programación -->
+        <div class="tarjeta">
+          <i class="fab fa-html5"></i>
+          <h2>HTML</h2>
+          <p id="html-desc">Estructura de páginas web con semántica correcta.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fab fa-css3-alt"></i>
+          <h2>CSS</h2>
+          <p id="css-desc">Estilos modernos, responsive design, animaciones.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fab fa-python"></i>
+          <h2>Python</h2>
+          <p id="python-desc">Automatización, análisis de datos y desarrollo backend.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-flask"></i>
+          <h2>Flask</h2>
+          <p id="flask-desc">Microframework para desarrollo web con Python.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fab fa-github"></i>
+          <h2>GitHub</h2>
+          <p id="github-desc">Control de versiones, repositorios y trabajo colaborativo.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-code"></i>
+          <h2>Visual Studio Code</h2>
+          <p id="vscode-desc">Editor de código potente con extensiones útiles.</p>
+        </div>
+
+        <div class="tarjeta">
+          <i class="fas fa-cube"></i>
+          <h2>Tinkercad</h2>
+          <p id="tinkercad-desc">Modelado 3D para impresión y prototipos electrónicos.</p>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="tarjeta">
+          <i class="fas fa-share-alt"></i>
+          <h2>Redes Sociales</h2>
+          <p id="rrss-desc">Manejo de publicaciones, engagement y diseño de contenido.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p id="pie-redes">Mis redes:</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/nati.santos.7" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/nar_anjalima/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <!-- Script de traducción -->
+  <script>
+    const traducciones = {
+      es: {
+        "nav-inicio": "Inicio",
+        "nav-habilidades": "Habilidades",
+        "nav-experiencia": "Experiencia",
+        "nav-formacion": "Formación",
+        "nav-contacto": "Contacto",
+        "titulo-habilidades": "Herramientas y Tecnologías",
+        "word-desc": "Procesamiento de textos, plantillas, índices automáticos, tablas.",
+        "excel-desc": "Fórmulas, funciones, tablas dinámicas, gráficos.",
+        "ppt-desc": "Presentaciones profesionales, animaciones, plantillas.",
+        "html-desc": "Estructura de páginas web con semántica correcta.",
+        "css-desc": "Estilos modernos, responsive design, animaciones.",
+        "python-desc": "Automatización, análisis de datos y desarrollo backend.",
+        "flask-desc": "Microframework para desarrollo web con Python.",
+        "github-desc": "Control de versiones, repositorios y trabajo colaborativo.",
+        "vscode-desc": "Editor de código potente con extensiones útiles.",
+        "tinkercad-desc": "Modelado 3D para impresión y prototipos electrónicos.",
+        "rrss-desc": "Manejo de publicaciones, engagement y diseño de contenido.",
+        "pie-redes": "Mis redes:"
+      },
+      en: {
+        "nav-inicio": "Home",
+        "nav-habilidades": "Skills",
+        "nav-experiencia": "Experience",
+        "nav-formacion": "Education",
+        "nav-contacto": "Contact",
+        "titulo-habilidades": "Tools and Technologies",
+        "word-desc": "Text processing, templates, automatic indexes, tables.",
+        "excel-desc": "Formulas, functions, pivot tables, charts.",
+        "ppt-desc": "Professional presentations, animations, templates.",
+        "html-desc": "Web page structure with proper semantics.",
+        "css-desc": "Modern styles, responsive design, animations.",
+        "python-desc": "Automation, data analysis, and backend development.",
+        "flask-desc": "Microframework for web development with Python.",
+        "github-desc": "Version control, repositories, and collaboration.",
+        "vscode-desc": "Powerful code editor with useful extensions.",
+        "tinkercad-desc": "3D modeling for printing and electronic prototyping.",
+        "rrss-desc": "Content design, publishing, and social engagement.",
+        "pie-redes": "My social media:"
+      }
+    };
+
+    function cambiarIdioma(idioma) {
+      const textos = traducciones[idioma];
+      for (let id in textos) {
+        const el = document.getElementById(id);
+        if (el) {
+          el.textContent = textos[id];
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
