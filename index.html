@@ -12,11 +12,17 @@
   <!-- Barra de navegación -->
   <header>
     <nav class="navbar">
-      <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
-      <a href="habilidades.html"><i class="fas fa-tools"></i> Habilidades</a>
-      <a href="experiencia.html"><i class="fas fa-briefcase"></i> Experiencia</a>
-      <a href="formacion.html"><i class="fas fa-graduation-cap"></i>Formación</a>
-      <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+      <div class="nav-izquierda">
+        <a href="index.html"><i class="fas fa-home"></i> <span id="nav-inicio">Inicio</span></a>
+        <a href="habilidades.html"><i class="fas fa-tools"></i> <span id="nav-habilidades">Habilidades</span></a>
+        <a href="experiencia.html"><i class="fas fa-briefcase"></i> <span id="nav-experiencia">Experiencia</span></a>
+        <a href="formacion.html"><i class="fas fa-graduation-cap"></i> <span id="nav-formacion">Formación</span></a>
+        <a href="contacto.html"><i class="fas fa-envelope"></i> <span id="nav-contacto">Contacto</span></a>
+      </div>
+      <div class="nav-derecha">
+        <button onclick="cambiarIdioma('es')">ESPAÑOL</button>
+        <button onclick="cambiarIdioma('en')">ENGLISH</button>
+      </div>
     </nav>
   </header>
 
@@ -28,8 +34,8 @@
           <img src="assets/img/mi-foto.jpeg" alt="Foto de perfil" />
         </div>
         <div class="descripcion">
-          <h1>¡Bienvenido a mi currículum!</h1>
-          <p>
+          <h1 id="titulo-bienvenida">¡Bienvenido a mi currículum!</h1>
+          <p id="parrafo-descripcion">
             Hola, soy Natalia Lorena Santos, desarrolladora en formación con pasión por la tecnología,
             la creatividad y el aprendizaje constante.
           </p>
@@ -37,11 +43,10 @@
       </div>
     </section>
   </main>
-  
 
   <!-- Pie de página -->
   <footer>
-    <p>Mis redes:</p>
+    <p id="pie-redes">Mis redes:</p>
     <div class="redes">
       <a href="https://www.facebook.com/nati.santos.7" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.instagram.com/nar_anjalima/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -50,5 +55,42 @@
     </div>
   </footer>
 
+  <!-- Script de traducción -->
+  <script>
+    const traducciones = {
+      es: {
+        "nav-inicio": "Inicio",
+        "nav-habilidades": "Habilidades",
+        "nav-experiencia": "Experiencia",
+        "nav-formacion": "Formación",
+        "nav-contacto": "Contacto",
+        "titulo-bienvenida": "¡Bienvenido a mi currículum!",
+        "parrafo-descripcion": "Hola, soy Natalia Lorena Santos, desarrolladora en formación con pasión por la tecnología, la creatividad y el aprendizaje constante.",
+        "pie-redes": "Mis redes:"
+      },
+      en: {
+        "nav-inicio": "Home",
+        "nav-habilidades": "Skills",
+        "nav-experiencia": "Experience",
+        "nav-formacion": "Education",
+        "nav-contacto": "Contact",
+        "titulo-bienvenida": "Welcome to my resume!",
+        "parrafo-descripcion": "Hi, I'm Natalia Lorena Santos, a developer in training with a passion for technology, creativity, and continuous learning.",
+        "pie-redes": "My social media:"
+      }
+    };
+
+    function cambiarIdioma(idioma) {
+      const textos = traducciones[idioma];
+      for (let id in textos) {
+        const el = document.getElementById(id);
+        if (el) {
+          el.textContent = textos[id];
+        }
+      }
+    }
+  </script>
+
 </body>
 </html>
+

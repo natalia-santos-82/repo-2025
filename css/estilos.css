@@ -25,6 +25,7 @@
     z-index: 1000;
 
   }
+
   
   .navbar a {
     color: #ffffff;
@@ -44,6 +45,44 @@
   .navbar i {
     font-size: 1.2rem;
   }
+  .navbar {
+  background-color: #20232a;
+  display: flex;
+  justify-content: space-between; /* separa izquierda y derecha */
+  align-items: center; /* alinea verticalmente */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Nueva clase: grupo izquierdo */
+.nav-izquierda {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Nueva clase: grupo derecho (idiomas) */
+.nav-derecha {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Estilo para botones de idioma */
+.nav-derecha button {
+  background-color: transparent;
+  border: 1px solid #61dafb;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-derecha button:hover {
+  background-color: #61dafb;
+  color: #20232a;
+}
   
   /* Contenido principal: Inicio */
   .inicio {
@@ -291,5 +330,6 @@
     .contenedor-inicio {
       flex-direction: column;
     }
+    
   }
   
