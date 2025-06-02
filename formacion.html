@@ -40,21 +40,20 @@ main {
 
   <!-- Contenido principal -->
   <main>
-    <main>
-  <section class="formacion-container">
-    <h1>Formación Académica</h1>
+   <section class="formacion-container">
+  <h1 id="titulo-formacion">Formación Académica</h1>
 
-    <div class="formacion-item">
-      <h2>Secundario Completo</h2>
-      <p>Escuela Secundaria [Nombre de tu escuela si querés agregarlo]. Finalizado.</p>
-    </div>
+  <div class="formacion-item">
+    <h2 id="formacion-secundaria">Secundario Completo</h2>
+    <p id="descripcion-secundaria">Escuela Secundaria. Finalizado.</p>
+  </div>
 
-    <div class="formacion-item">
-      <h2>Tecnicatura Superior en Análisis de Sistemas</h2>
-      <p>Actualmente cursando el último año en [Nombre de tu institución si querés agregarlo].</p>
-    </div>
-  </section>
-</main>
+  <div class="formacion-item">
+    <h2 id="formacion-tecnicatura">Tecnicatura Superior en Análisis de Sistemas</h2>
+    <p id="descripcion-tecnicatura">Actualmente cursando el último año.</p>
+  </div>
+</section>
+
 
    
   </main>
@@ -69,5 +68,44 @@ main {
       <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </footer>
+  <script>
+const traducciones = {
+  es: {
+    "titulo-formacion": "Formación Académica",
+    "formacion-secundaria": "Secundario Completo",
+    "descripcion-secundaria": "Escuela Secundaria [Nombre de tu escuela si querés agregarlo]. Finalizado.",
+    "formacion-tecnicatura": "Tecnicatura Superior en Análisis de Sistemas",
+    "descripcion-tecnicatura": "Actualmente cursando el último año en [Nombre de tu institución si querés agregarlo].",
+    "nav-inicio": "Inicio",
+    "nav-habilidades": "Habilidades",
+    "nav-experiencia": "Experiencia",
+    "nav-formacion": "Formación",
+    "nav-contacto": "Contacto",
+    "pie-redes": "Mis redes:"
+  },
+  en: {
+    "titulo-formacion": "Academic Background",
+    "formacion-secundaria": "High School Diploma",
+    "descripcion-secundaria": "High school completed.",
+    "formacion-tecnicatura": "Higher Technician in Systems Analysis",
+    "descripcion-tecnicatura": "Currently attending the final year.",
+    "nav-inicio": "Home",
+    "nav-habilidades": "Skills",
+    "nav-experiencia": "Experience",
+    "nav-formacion": "Education",
+    "nav-contacto": "Contact",
+    "pie-redes": "My social networks:"
+  }
+};
+
+function cambiarIdioma(idioma) {
+  const elementos = document.querySelectorAll("[id]");
+  elementos.forEach(el => {
+    const traduccion = traducciones[idioma][el.id];
+    if (traduccion) el.textContent = traduccion;
+  });
+}
+</script>
+
   </body>
 </html>
