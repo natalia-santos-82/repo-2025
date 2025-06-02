@@ -333,3 +333,31 @@
     
   }
   
+  .formacion-container {
+  max-width: 800px;
+
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formacion-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.formacion-item {
+  margin-bottom: 20px;
+}
+
+.formacion-item h2 {
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.formacion-item p {
+  color: #666;
+}

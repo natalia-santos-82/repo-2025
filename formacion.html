@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habilidades - Mi Currículum</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<style>
+ 
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ocupa toda la pantalla */
+  padding: 40px 0; /* para evitar que se pegue demasiado si hay mucho contenido */
+}
+</style>
+<body>
+
+  <!-- Barra de navegación -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-izquierda">
+        <a href="index.html"><i class="fas fa-home"></i> <span id="nav-inicio">Inicio</span></a>
+        <a href="habilidades.html"><i class="fas fa-tools"></i> <span id="nav-habilidades">Habilidades</span></a>
+        <a href="experiencia.html"><i class="fas fa-briefcase"></i> <span id="nav-experiencia">Experiencia</span></a>
+        <a href="formacion.html"><i class="fas fa-graduation-cap"></i> <span id="nav-formacion">Formación</span></a>
+        <a href="contacto.html"><i class="fas fa-envelope"></i> <span id="nav-contacto">Contacto</span></a>
+      </div>
+      <div class="nav-derecha">
+        <button onclick="cambiarIdioma('es')">ESPAÑOL</button>
+        <button onclick="cambiarIdioma('en')">ENGLISH</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+   <section class="formacion-container">
+  <h1 id="titulo-formacion">Formación Académica</h1>
+
+  <div class="formacion-item">
+    <h2 id="formacion-secundaria">Secundario Completo</h2>
+    <p id="descripcion-secundaria">Escuela Secundaria. Finalizado.</p>
+  </div>
+
+  <div class="formacion-item">
+    <h2 id="formacion-tecnicatura">Tecnicatura Superior en Análisis de Sistemas</h2>
+    <p id="descripcion-tecnicatura">Actualmente cursando el último año.</p>
+  </div>
+</section>
+
+
+   
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p id="pie-redes">Mis redes:</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/nati.santos.7" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/nar_anjalima/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+  <script>
+const traducciones = {
+  es: {
+    "titulo-formacion": "Formación Académica",
+    "formacion-secundaria": "Secundario Completo",
+    "descripcion-secundaria": "Escuela Secundaria [Nombre de tu escuela si querés agregarlo]. Finalizado.",
+    "formacion-tecnicatura": "Tecnicatura Superior en Análisis de Sistemas",
+    "descripcion-tecnicatura": "Actualmente cursando el último año en [Nombre de tu institución si querés agregarlo].",
+    "nav-inicio": "Inicio",
+    "nav-habilidades": "Habilidades",
+    "nav-experiencia": "Experiencia",
+    "nav-formacion": "Formación",
+    "nav-contacto": "Contacto",
+    "pie-redes": "Mis redes:"
+  },
+  en: {
+    "titulo-formacion": "Academic Background",
+    "formacion-secundaria": "High School Diploma",
+    "descripcion-secundaria": "High school completed.",
+    "formacion-tecnicatura": "Higher Technician in Systems Analysis",
+    "descripcion-tecnicatura": "Currently attending the final year.",
+    "nav-inicio": "Home",
+    "nav-habilidades": "Skills",
+    "nav-experiencia": "Experience",
+    "nav-formacion": "Education",
+    "nav-contacto": "Contact",
+    "pie-redes": "My social networks:"
+  }
+};
+
+function cambiarIdioma(idioma) {
+  const elementos = document.querySelectorAll("[id]");
+  elementos.forEach(el => {
+    const traduccion = traducciones[idioma][el.id];
+    if (traduccion) el.textContent = traduccion;
+  });
+}
+</script>
+
+  </body>
+</html>
